@@ -5,24 +5,50 @@
 		<title>ET's Monsters</title>
     <style>
       :root {
-        --foldersize: 75vw;
+        --folderwidth: 80vw;
+        --folderheight: 2000px;
+        --foldercolor: #f7f399;
+        --folderborder: #dbd774;
         /* comment */
       }
-      
+      body {
+        font-family: Courier New, Courier, monospace;
+      }
       .mainfolder {
-        width: var(--foldersize);
-        height: 70vh;
-        background-color: yellow;
+        width: var(--folderwidth);
+        height: var(--folderheight);
+        
+        background-color: var(--foldercolor);
+        
+        border-radius: 0% 1% 1% 1%;
+  
         margin-top: 30vh;
-        margin-left: calc( 0.5 * calc(100% - var(--foldersize)));
-        margin-right: calc(0.5 * calc(100% - var(--foldersize)));
-      
+        margin-left: calc( 0.5 * calc(100% - var(--folderwidth)));
+        margin-right: calc(0.5 * calc(100% - var(--folderwidth)));
+      }
+      .foldertabs {
+        position: absolute;
+        top: 23vh;
+      }
+      .tabs {
+        width: calc( 0.25 * var(--folderwidth));
+        height: 7vh;
+  
+        font-family: Courier New, Courier, monospace;
+        font-size: calc( 0.025 * var(--folderwidth));
+        background-color: var(--foldercolor);
+        
+        padding: 2vh;
+        border-bottom: none;
+        border-radius: 45% 45% 0% 0%;
       }
     </style>
   </head> 
 	<body>
 		<div class="mainfolder">
-    
+      <div class="foldertabs">
+        <button class="tabs">Scary Monsters</button><button class="tabs" id="tabtall">Horrific Stories</button><button class="tabs">Terrible Code</button>
+      </div>
     </div>
 	</body>
 </html>
